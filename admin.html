@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+</head>
+<body>
+    <h1>Admin Notifications</h1>
+
+    <ul>
+        {% for note in notifications %}
+            <li>{{ note }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | NomNom</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleSL.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 350px;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #7C4A6A;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #9C5B83;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        .flash-message {
+            margin-bottom: 10px;
+            font-size: 0.9em;
+        }
+
+        .flash-message.error {
+            color: red;
+        }
+
+        .flash-message.success {
+            color: green;
+        }
+
+        a {
+            color: #7C4A6A;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>🔐 Login Page</h2>
+
+        <!-- Display flash messages from Flask -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="flash-message {{ category }}">{{ message }}</div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+
+        <!-- Form submits to / (Flask login route) -->
+        <form id="loginForm" method="POST" action="/" onsubmit="return validateLogin()">
+            <input type="email" id="email" name="email" placeholder="Enter email" required><br>
+            <input type="password" id="password" name="password" placeholder="Enter password" required><br>
+            <div id="errorMsg" class="error"></div>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="/signup">Signup here</a></p>
+    </div>
+
+    <script>
+        function validateLogin() {
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const errorMsg = document.getElementById("errorMsg");
+
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/;
+            const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+
+            if (!emailPattern.test(email)) {
+                errorMsg.textContent = "❌ Email must follow name@domain.com format.";
+                return false;
+            }
+            if (!passwordPattern.test(password)) {
+                errorMsg.textContent = "❌ Password must include uppercase, lowercase, number, and special char.";
+                return false;
+            }
+
+            errorMsg.textContent = "";
+            return true;
+        }
+    </script>
+</body>
+</html>

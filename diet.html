@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NomNom - Diet Plans</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* layout for both boxes side by side */
+    .diet-box {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    /* individual box style */
+    .diet {
+      background-color: #7C4A6A;
+      color: white;
+      border-radius: 10px;
+      padding: 20px;
+      width: 40%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* heading inside boxes */
+    .diet h3 {
+      text-align: center;
+      font-size: 1.4em;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .diet ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .diet li {
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .diet li em {
+      display: block;
+      font-style: italic;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    @media (max-width: 768px) {
+      .diet {
+        width: 90%;
+      }
+    }
+
+    /* download button style */
+    .download-btn {
+      display: inline-block;
+      background-color: #7C4A6A;
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      margin: 5px 0;
+    }
+
+    .download-btn:hover {
+      background-color: #9C5B83;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="c:/Users/HP/Pictures/new.png" alt="NomNom Logo">
+      <h1>NomNom</h1>
+    </div>
+  
+    <div class="search-wrapper">
+      <input type="text" id="searchBar" placeholder="Search for recipes">
+    </div>
+  
+    <nav>
+      <a href="index.html">
+        <img src="https://cdn-icons-png.flaticon.com/512/1946/1946436.png" alt="Home Icon">
+        Home
+      </a>
+      <a href="diet.html" class="active">
+        <img src="https://cdn-icons-png.flaticon.com/512/135/135620.png" alt="Diet Icon">
+        Diet Plan
+      </a>
+      <a href="search.html">
+        <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Search Icon">
+        Search
+      </a>
+      <a href="contact.html">
+        <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Contact Icon">
+        Contact
+      </a>
+    </nav>
+  </header>
+
+  <section id="diet">
+    <h2>Diet Plans</h2>
+    <div class="diet-box">
+      
+      <div class="diet" id="weight-loss">
+        <h3>Weight Loss Plan</h3>
+        <ul>
+          <li><em>Breakfast</em>Smoothie, green tea</li>
+          <li><em>Lunch</em>Boiled chicken, eggs, tea</li>
+          <li><em>Snack</em>Almonds, green tea</li>
+          <li><em>Dinner</em>Bread, green tea</li>
+        </ul>
+      </div>
+
+      <div class="diet" id="weight-gain">
+        <h3>Weight Gain Plan</h3>
+        <ul>
+          <li><em>Breakfast</em>Eggs, brown bread</li>
+          <li><em>Lunch</em>Brown rice, chicken, salad</li>
+          <li><em>Snack</em>Protein shake, dry fruits</li>
+          <li><em>Dinner</em>Grilled fish, veggies, green tea</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Only Download button -->
+    <div style="text-align:center; margin-top:30px;">
+      <a href="weklyplan.pdf" download class="download-btn">📥 Download Weekly Diet Plan (PDF)</a>
+    </div>
+
+  </section>
+  <section id="testimonials">
+  <h2>What Our Users Say</h2>
+  <div class="testimonial-container">
+    
+    <div class="testimonial">
+      <p>“The Weight Loss Plan really helped me shed 5kg in a month! Highly recommend.”</p>
+      <h4>- Sarah K.</h4>
+    </div>
+
+    <div class="testimonial">
+      <p>“The Weight Gain Plan gave me healthy results without junk food. Amazing!”</p>
+      <h4>- Ahmed R.</h4>
+    </div>
+
+    <div class="testimonial">
+      <p>“NomNom diet plans are easy to follow and delicious. Love it!”</p>
+      <h4>- Maria L.</h4>
+    </div>
+
+  </div>
+</section>
+<section id="tips">
+  <h2>Nutrition Tips</h2>
+  <ul>
+    <li>Drink at least 8 glasses of water daily.</li>
+    <li>Include fruits and vegetables in every meal.</li>
+    <li>Avoid processed sugar and fried food.</li>
+  </ul>
+</section>
+
+
+  <footer>
+    <p>© 2025 NomNom | All rights reserved</p>
+  </footer>
+</body>
+</html>

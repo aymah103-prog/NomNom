@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NomNom</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Header -->
+<header>
+  <div class="logo">
+    <img src="c:\Users\HP\Pictures\new.png" alt="NomNom Logo">
+    <h1>NomNom</h1>
+  </div>
+  <div class="search-wrapper">
+    <input type="text" id="searchBar" placeholder="Search for recipes">
+  </div>
+  
+
+  <nav>
+    <a href="#home" class="active">
+      <img src="https://cdn-icons-png.flaticon.com/512/1946/1946436.png" alt="Home Icon">
+      Home
+    </a>
+    <a href="./diet.html" class="diet-link">
+  <img src="https://cdn-icons-png.flaticon.com/512/135/135620.png" alt="Diet Plan Icon">
+  <span>Diet Plan</span>
+</a>
+
+    <a href="#search">
+      <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Search Icon">
+      Search
+    </a>
+    <a href="#contact">
+      <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Contact Icon">
+      Contact
+    </a>
+  </nav>
+  
+</header>
+
+<!-- Search Results Section -->
+<section id="search">
+  <div id="searchResults"></div>
+</section>
+
+<!-- Home Section -->
+<section id="home">
+  <h2>Popular Recipes</h2>
+
+  <div class="recipe-container">
+    <!-- Row 1 -->
+    <div class="recipe" data-title="Chicken Biryani" data-desc="Basmati rice with tender chicken, saffron and warm spices.">
+      <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg" alt="Chicken Biryani">
+      <h3>Chicken Biryani</h3>
+      <p>Spicy rice with chicken and desi tarka of herbs.</p>
+    </div>
+
+    <div class="recipe" data-title="Chicken Burger" data-desc="Juicy chicken patty, cheese, lettuce and tomatoes in a soft bun.">
+      <img src="https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg" alt="Chicken Burger">
+      <h3>Chicken Burger</h3>
+      <p>Cheese burger smashed with chicken and vegetables.</p>
+    </div>
+
+    <div class="recipe" data-title="Italian Pizza" data-desc="Thin-crust pizza topped with mozzarella and pepperoni.">
+      <img src="c:\Users\HP\Desktop\priceoyewebsite\images\pizza.jpeg" alt="Italian Pizza">
+      <h3>Italian Pizza</h3>
+      <p>Cheesy pepperoni pizza with barbeque topping.</p>
+    </div>
+
+    <div class="recipe" data-title="Alfredo Pasta" data-desc="Creamy Alfredo sauce with mushrooms and spinach.">
+      <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg" alt="Alfredo Pasta">
+      <h3>Alfredo Pasta</h3>
+      <p>White creamy pasta with spinach and mushrooms.</p>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="recipe" data-title="Beef Karahi" data-desc="Tomato-based karahi masala with tender beef.">
+      <img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg" alt="Beef Karahi">
+      <h3>Beef Karahi</h3>
+      <p>Authentic desi beef karahi with bold flavours.</p>
+    </div>
+
+    <div class="recipe" data-title="Shawarma Roll" data-desc="Grilled chicken, garlic sauce and salad in a wrap.">
+      <img src="c:\Users\HP\Desktop\priceoyewebsite\images\shawarma.jpeg" alt="Shawarma Roll">
+      <h3>Shawarma Roll</h3>
+      <p>Grilled chicken shawarma with sauces and veggies.</p>
+    </div>
+
+    <div class="recipe" data-title="Paneer Tikka" data-desc="Marinated paneer cubes grilled and served with mint chutney.">
+      <img src="c:\Users\HP\Desktop\priceoyewebsite\images\paneer.jpg" alt="Paneer Tikka">
+      <h3>Paneer Tikka</h3>
+      <p>Grilled paneer marinated in yogurt and spices.</p>
+    </div>
+
+    <div class="recipe" data-title="Fish & Chips" data-desc="Crispy battered fish fillets with fries.">
+      <img src="c:\Users\HP\Desktop\priceoyewebsite\images\Fish_and_chips_blackpool.jpg" alt="Fish and Chips">
+      <h3>Fish & Chips</h3>
+      <p>Crispy fried fish with golden fries.</p>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="recipe" data-title="Tandoori Chicken" data-desc="Smoky chicken marinated with yogurt and spices.">
+      <img src="c:\Users\HP\Desktop\priceoyewebsite\images\tandoori.jpg" alt="Tandoori Chicken">
+      <h3>Tandoori Chicken</h3>
+      <p>Grilled spicy chicken with smoky flavour.</p>
+    </div>
+
+    <div class="recipe" data-title="Mutton Pulao" data-desc="Aromatic rice cooked with mutton stock and whole spices.">
+      <img src="c:\Users\HP\Desktop\priceoyewebsite\images\muttonnn.jpeg" alt="Mutton Pulao">
+      <h3>Mutton Pulao</h3>
+      <p>Fragrant rice cooked with juicy mutton pieces.</p>
+    </div>
+
+    <div class="recipe" data-title="Club Sandwich" data-desc="Triple-layer chicken and egg sandwich with mayo.">
+      <img src="https://images.pexels.com/photos/1600711/pexels-photo-1600711.jpeg" alt="Club Sandwich">
+      <h3>Club Sandwich</h3>
+      <p>Layered sandwich with chicken, egg, and lettuce.</p>
+    </div>
+
+    <div class="recipe" data-title="Chocolate Lava Cake" data-desc="Warm chocolate cake with a molten centre.">
+      <img src="https://images.pexels.com/photos/4109997/pexels-photo-4109997.jpeg" alt="Chocolate Lava Cake">
+      <h3>Chocolate Lava Cake</h3>
+      <p>Warm dessert with molten chocolate inside.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Popup -->
+<div id="popup-box" class="popup-box">
+  <div class="popup-content">
+    <span class="close-btn">&times;</span>
+    <h3 id="popup-title"></h3>
+    <p id="popup-text"></p>
+  </div>
+</div>
+  
+      </div>
+    </div>
+  </section>
+
+ 
+ 
+
+  <footer>
+    <p>© 2025 NomNom | All rights reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
